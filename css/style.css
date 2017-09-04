@@ -1,0 +1,283 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: none;
+}
+
+body {
+  width: 260px;
+  height: 320px;
+  font-family: Helvetica;
+}
+
+h1 {
+  background: url("../images/logo.png") no-repeat;
+  margin: 20px 0 10px 0;
+  text-indent: -9999px;
+}
+
+p#article_title {
+  width: 100%;
+  height: 32px;
+  line-height: 16px;
+  font-size: 12px;
+  text-indent: 1px;
+  color: #727171;
+}
+
+div#wrapper {
+  width: 216px;
+  margin: 0 auto;
+}
+
+#voice_wave {
+  display: -webkit-flex;
+  width: 216px;
+  height: 178px;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+}
+
+button {
+  display: inline-block;
+  width: 100%;
+  height:41px;
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.30);
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: lighter;
+  color: #FFFFFF;
+}
+
+button[disabled]{
+  opacity: 0.5;
+}
+
+button[disabled]:active{
+  box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.30);
+  opacity: 0.5;
+  outline: none;
+}
+
+button:active {
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.50);
+  outline: none;
+}
+
+button:focus {
+  outline:none;
+}
+
+button.small_btn {
+  margin-left: 4%;
+  width: 22%;
+  height:41px;
+}
+
+button#str_btn, button#pause_btn, button#resume_btn {
+  background: #0F88EB;
+}
+
+button#stop_btn, button#next_btn, button#pre_btn {
+  background: #FFFFFF;
+  color: #383635;
+}
+
+button#pre_btn {
+  margin-left: 0px;
+}
+
+button#stop_btn {
+  font-size: 21px;
+}
+
+div.bar {
+  display: inline-block;
+  width: 8px;
+  height: 35px;
+  margin: 0 4px;
+  background-color: #B5B6B6;
+}
+
+@-webkit-keyframes wave1 {
+  0%{
+    opacity: 0.25;
+    height: 20px;
+  }
+
+  16.66%{
+    opacity: 0.5;
+    height: 35px;
+  }
+
+  33.33%{
+    opacity: 0.75;
+    height: 50px;
+  }
+
+  50%{
+    opacity: 1;
+    height: 65px;
+  }
+
+  66.66%{
+    opacity: 0.75;
+    height: 50px;
+  }
+
+  83.33%{
+    opacity: 0.5;
+    height: 35px;
+  }
+
+  100%{
+    opacity: 0.25;
+    height: 20px;
+  }
+}
+
+@-webkit-keyframes wave2 {
+  0%{
+    opacity: 0.5;
+    height: 35px;
+  }
+
+  16.66%{
+    opacity: 0.75;
+    height: 50px;
+  }
+
+  33.33%{
+    opacity: 1;
+    height: 65px;
+  }
+
+  50%{
+    opacity: 0.75;
+    height: 50px;
+  }
+
+  66.66%{
+    opacity: 0.5;
+    height: 35px;
+  }
+
+  83.33%{
+    opacity: 0.25;
+    height: 20px;
+  }
+
+  100%{
+    opacity: 0.5;
+    height: 35px;
+  }
+}
+
+@-webkit-keyframes wave3 {
+  0%{
+    opacity: 0.75;
+    height: 50px;
+  }
+
+  16.66%{
+    opacity: 1;
+    height: 65px;
+  }
+
+  33.33%{
+    opacity: 0.75;
+    height: 50px;
+  }
+
+  50%{
+    opacity: 0.5;
+    height: 35px;
+  }
+
+  66.66%{
+    opacity: 0.25;
+    height: 20px;
+  }
+
+  83.33%{
+    opacity: 0.5;
+    height: 35px;
+  }
+
+  100%{
+    opacity: 0.75;
+    height: 50px;
+  }
+}
+
+@-webkit-keyframes wave4 {
+  0%{
+    opacity: 1;
+    height: 65px;
+  }
+
+  16.66%{
+    opacity: 0.75;
+    height: 50px;
+  }
+
+  33.33%{
+    opacity: 0.5;
+    height: 35px;
+  }
+
+  50%{
+    opacity: 0.25;
+    height: 20px;
+  }
+
+  66.66%{
+    opacity: 0.5;
+    height: 35px;
+  }
+
+  83.33%{
+    opacity: 0.75;
+    height: 50px;
+  }
+
+  100%{
+    opacity: 1;
+    height: 65px;
+  }
+}
+
+.bar:nth-child(1), .bar:nth-child(7), .bar:nth-child(13){
+  height: 20px;
+  opacity: 0.25;
+}
+
+.bar:nth-child(2), .bar:nth-child(6), .bar:nth-child(8), .bar:nth-child(12){
+  height: 35px;
+  opacity: 0.5;
+}
+.bar:nth-child(3), .bar:nth-child(5), .bar:nth-child(9), .bar:nth-child(11){
+  height: 50px;
+  opacity: 0.75;
+}
+.bar:nth-child(4), .bar:nth-child(10){
+  height: 65px;
+  opacity: 1;
+ }
+
+.wave:nth-child(1), .wave:nth-child(7), .wave:nth-child(13){
+ -webkit-animation: wave1 0.8s linear infinite normal;
+}
+
+.wave:nth-child(2), .wave:nth-child(6), .wave:nth-child(8), .wave:nth-child(12) {
+ -webkit-animation: wave2 0.8s linear infinite normal;
+}
+
+.wave:nth-child(3), .wave:nth-child(5), .wave:nth-child(9), .wave:nth-child(11){
+ -webkit-animation: wave3 0.8s linear infinite normal;
+}
+
+.wave:nth-child(4), .wave:nth-child(10) {
+ -webkit-animation: wave4 0.8s linear infinite normal;
+}
